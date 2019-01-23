@@ -54,23 +54,6 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	<script type=“text/javascript” src=“js/jquery-1.6.4.min.js”></script>
-	<script type=“text/javascript” src=“http://www.steamdev.com/zclip/js/jquery.zclip.min.js”></script>
-	<script>
-	$(function(){
-	    $(‘#copy-btn’).zclip({
-	        path:‘js/ZeroClipboard.swf’,
-	        copy:function(){
-	            return $(‘#ipt’).val();
-	        }
-	    }).click(function(){
-	        $(“#ipt”).val(“);
-	        alert(‘已複製到剪貼薄’);
-	    });
-	});
-
-	</script>
-
 	</head>
 	<body>
 		
@@ -608,7 +591,12 @@
 					<h2>履歷完整資訊</h2>
 					<p>完整履歷請透過下方連結下載，感謝您撥空閱讀本網頁</p>
 					<p><a href="#" class="btn btn-warning btn-lg">前往下載</a></p>
-					<p><input style="width:300px; margin-left:15px;" type="text" id="ipt" value="0bxzzgpf"><a href="#" id=“copy-btn” class="btn btn-warning btn-lg">複製密碼</a>    
+					<input style="width:300px; margin-left:15px;" type="text" id="ipt" value="0bxzzgpf">
+					<a href="#" id="copy-btn" class="btn btn-warning btn-lg">複製密碼</a> 
+					    <!-- 1. Define some markup -->
+					<button id="btn" data-clipboard-text="Just because you can doesn't mean you should — clipboard.js">
+					   複製密碼
+					</button>
 					</p>
 				</div>
 
@@ -638,6 +626,19 @@
 	
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+	 <script>
+	 	new ClipboardJS('.btn');
+	    var btn = document.getElementById('btn');
+	    var clipboard = new ClipboardJS(btn);
+	    clipboard.on('success', function(e) {
+	        console.log(e);
+	    });
+	    clipboard.on('error', function(e) {
+	        console.log(e);
+	    });
+
+    </script>
 
 	</body>
 </html>
