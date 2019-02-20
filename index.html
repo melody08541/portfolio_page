@@ -11,7 +11,6 @@
 
 	<!-- 
 	//////////////////////////////////////////////////////
-
 	FREE HTML5 TEMPLATE 
 	DESIGNED & DEVELOPED by FreeHTML5.co
 		
@@ -19,7 +18,6 @@
 	Email: 			info@freehtml5.co
 	Twitter: 		http://twitter.com/fh5co
 	Facebook: 		https://www.facebook.com/fh5co
-
 	//////////////////////////////////////////////////////
 	 -->
 
@@ -414,6 +412,14 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4 text-center col-padding animate-box">
+					<a href="https://codepen.io/B2uty8541/pen/mAAdRd" class="work" style="background-image: url(images/project1_namecard.png);" target="_blank">
+						<div class="desc">
+							<h3>個人名片</h3>
+							<span>HTML+CSS</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center col-padding animate-box">
 					<a href="https://codepen.io/B2uty8541/pen/MZRgNz" class="work" style="background-image: url(images/project2_StyleGuideline.png);" target="_blank">
 						<div class="desc">
 							<h3>品牌視覺引導頁</h3>
@@ -437,14 +443,24 @@
 						</div>
 					</a>
 				</div>
-				<div class="col-md-4 text-center col-padding animate-box">
-					<a href="https://drive.google.com/file/d/1OzuS8cJNlT80zhCt1seaAeA-RnIO7YxU/view?usp=sharing" class="work" style="background-image: url(images/project5_app_ui.png);" target="_blank">
-						<div class="desc">
-							<h3>APP UI設計</h3>
-							<span>畢業專題</span>
-						</div>
-					</a>
+			</div>
+		</div>
+	</div>
+<div id="fh5co-started" class="fh5co-bg-blue">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>履歷完整資訊</h2>
+					<p>完整履歷請透過下方連結下載，感謝您撥空閱讀本網頁</p>
+					<p><a href="download/黃靖雯_前端工程師_履歷.zip" class="btn btn-warning btn-lg">下載履歷(.zip)</a></p>
+					<button id="btn" data-clipboard-text="0bxzzgpf" class="btn btn-warning btn-lg">
+					   複製密碼
+					</button>
+					</p>
+					<p><h5><小叮嚀> 檔案已加密，請複製密碼供解壓縮查閱</h5></p>
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -468,7 +484,23 @@
 	<!-- Google Map -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
 	<script src="js/google_map.js"></script>
+	
+	<!-- Main -->
+	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+	 <script>
+	 	new ClipboardJS('.btn');
+	    var btn = document.getElementById('btn');
+	    var clipboard = new ClipboardJS(btn);
+	    clipboard.on('success', function(e) {
+	        console.log(e);
+	        alert("複製成功，請將密碼貼上壓縮檔！");
+	    });
+	    clipboard.on('error', function(e) {
+	        console.log(e);
+	        alert("複製失敗，請在試一次");
+	    });
+    </script>
 
 	</body>
 </html>
-
