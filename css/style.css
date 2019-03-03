@@ -11,7 +11,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Space Mono", Arial, serif;
+  font-family: 微軟正黑體,"Space Mono", Arial, serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -1337,4 +1337,10 @@ input[type="text"] {
   clear: both;
 }
 
+.footer{
+  background-color: black;
+  text-align: center;
+  margin: 0 auto;
+
+}
 /*# sourceMappingURL=style.css.map */
